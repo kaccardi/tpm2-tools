@@ -306,7 +306,7 @@ int tpm2_tool_onrun(TSS2_SYS_CONTEXT *sapi_context, tpm2_option_flags flags) {
     }
 
     returnVal = create_primary(sapi_context);
-    if (returnVal != 0 || ctx.flags.C != 1) {
+    if (!returnVal || ctx.flags.C != 1) {
         return returnVal;
     }
 
