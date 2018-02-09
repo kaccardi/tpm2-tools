@@ -301,7 +301,7 @@ int tpm2_tool_onrun(TSS2_SYS_CONTEXT *sapi_context, tpm2_option_flags flags) {
     UNUSED(flags);
     int returnVal;
 
-    if (valid_ctx(ctx) != true) {
+    if (!valid_ctx(ctx)) {
         return 1;
     }
 
